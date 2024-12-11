@@ -41,7 +41,7 @@ ArrayList<String> bubbleSort(ArrayList<String> array) {
             }
         }
         return array;
-    }
+}
 
 ArrayList<String> mergeSort(ArrayList<String> array) {
         if (array.size() <= 1) {
@@ -72,7 +72,7 @@ ArrayList<String> mergeSort(ArrayList<String> array) {
             j++;
         }
         return result;
-    }
+}
 
 long measureBubbleSort(String filename) throws IOException {
         List<String> cards = new ArrayList<>();
@@ -86,7 +86,7 @@ long measureBubbleSort(String filename) throws IOException {
         bubbleSort(new ArrayList<>(cards));
         long endTime = System.currentTimeMillis();
         return endTime - startTime;
-    }
+}
 
 long measureMergeSort(String filename) throws IOException {
         BufferedReader reader = new BufferedReader(new FileReader(filename));
@@ -100,7 +100,7 @@ long measureMergeSort(String filename) throws IOException {
         mergeSort(cards);
         long endTime = System.nanoTime();
         return (endTime - startTime) / 1_000_000;
-    }
+}
 
 void sortComparison(String[] filenames) throws IOException {
     BufferedWriter writer = new BufferedWriter(new FileWriter("sortComparison.csv"));
